@@ -48,7 +48,7 @@ This project involves dividing customers into different groups using data obtain
 
 2. **Exploratory Data Analysis (EDA)**:
    - **Visualizations**: Created histograms and scatter plots to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
-   ![EDA Visualization](./images/eda_visualization.png)
+   ![EDA Visualization](./assets/images/Occurrence_of_flows.png)
    - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
 
 3. **Feature Engineering**:
