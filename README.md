@@ -47,8 +47,9 @@ This project involves dividing customers into different groups using data obtain
    - **Transaction Frequency**: Frequency of customer interactions, highlighting how often customers use the chatbot for various services.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - **Visualizations**: Created histograms and scatter plots to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
+   - **Visualizations**: Created histograms and stacked bar charts to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
    ![EDA Visualization](./assets/images/Occurrence_of_flows.png)
+   ![EDA Visualization](./assets/images/Occurrences_of_flows.png)
    - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
 
 3. **Feature Engineering**:
