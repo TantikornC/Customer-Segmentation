@@ -10,11 +10,10 @@ Welcome to my data science portfolio! Here, I showcase my project and expertise 
 This project involves dividing customers into different groups using data obtained from a banking chatbot. The objective is to categorize customers into distinct segments to enable targeted marketing strategies, improving engagement and sales.
 
 #### **Tools & Technologies**
-- Python
-- Pandas
-- Scikit-learn
-- Matplotlib
-- Seaborn
+- **Programming**: Python
+- **Data Analysis**: Pandas, Scikit-learn
+- **Visualization**: Matplotlib, Seaborn
+- **Feature Scaling**: Max scaling
 
 #### **Steps & Methodology**
 1. **Data Collection**:
@@ -31,68 +30,53 @@ This project involves dividing customers into different groups using data obtain
 
 4. **Feature Engineering**:
    - Created new features such as Recency, Frequency, and Monetary (RFM) values to capture customer behaviors based on chatbot interactions.
-   - Created 
+   - Applied max scaling for feature scaling to normalize the range of each feature before clustering.
 
 5. **Clustering with K-means**:
-   - Implemented the K-means clustering algorithm to segment customers into distinct groups.
-   - Determined the optimal number of clusters using the Elbow method to ensure meaningful segmentation.
+   - Implemented the K-means clustering algorithm and initially set the number of clusters to 20, following the guidance from a senior data scientist.
+   - Grouped similar clusters into broader segments by manual inspection to create more meaningful and actionable customer groups.
 
 6. **Cluster Analysis**:
    - Analyzed each cluster to identify unique characteristics and customer behaviors.
    - Defined segments based on attributes such as interaction frequency, transaction history, and customer engagement.
 
-#### **Analytics & Results**
+#### **Analytics & Visual Results**
 
 1. **Data Collection & Handling**:
-   - Gathered data from a banking chatbot, including:
-     - **Chatbot Interaction Logs**: Records of customer interactions, detailing inquiries and actions taken.
-     - **Transaction Frequency**: How often customers use the chatbot for transactions or information requests.
-     - **Types of Requests**: Nature of requests made through the chatbot, such as balance inquiries, transfers, or loan applications.
-     - **Engagement Patterns**: Analysis of peak interaction times, duration of sessions, and common user paths.
-   - The dataset, comprising over 1 million records, was large enough to maintain robustness even after dropping missing values.
+   - **Chatbot Interaction Logs**: Detailed logs capturing customer queries and interactions with the banking chatbot, providing insights into customer behavior and engagement.
+   - **Transaction Frequency**: Frequency of customer interactions, highlighting how often customers use the chatbot for various services.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - Conducted EDA to understand the patterns and distributions of customer interactions.
-   - Visualized key trends and relationships between customer behaviors using histograms and scatter plots.
+   - **Visualizations**: Created histograms and scatter plots to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
+   ![EDA Visualization](./images/eda_visualization.png)
+   - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
 
 3. **Feature Engineering**:
-   - Engineered features like RFM values to represent customer behaviors comprehensively based on chatbot interactions.
-   - Created additional features to capture detailed patterns in customer interactions and transaction history.
+   - **RFM Features**: Engineered Recency, Frequency, and Monetary values to represent customer behaviors comprehensively. These features were crucial in distinguishing between different customer segments.
+   - **Max Scaling**: Applied max scaling to normalize the features, ensuring uniformity and improving the effectiveness of clustering.
+   ![Feature Engineering](./images/feature_engineering.png)
 
 4. **Clustering**:
-   - Applied K-means clustering to divide customers into 4 distinct segments: **Frequent Interactors**, **High Transaction Users**, **New Users**, and **Low Engagement Users**.
-   - Used the Elbow method to identify the optimal number of clusters, ensuring meaningful segmentation.
+   - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
+   - **Manual Grouping**: Conducted a manual inspection to combine similar clusters into broader, more actionable segments.
+   ![Initial Clusters](./images/initial_clusters.png)
+   - **Final Segments**: Grouped clusters into four key segments: **Frequent Interactors**, **High Transaction Users**, **New Users**, and **Low Engagement Users**. This segmentation facilitated targeted marketing strategies.
+   ![Cluster Grouping](./images/cluster_grouping.png)
 
 5. **Cluster Characteristics**:
-   - **Frequent Interactors**: Customers who frequently interact with the banking chatbot, indicating high engagement.
-   - **High Transaction Users**: Customers with significant transaction activity via the chatbot, valuable for targeted premium services.
-   - **New Users**: Recently acquired customers with potential for growth, ideal for introductory offers.
-   - **Low Engagement Users**: Customers with minimal interaction, targeted for re-engagement campaigns.
+   - **Frequent Interactors**: Customers with high engagement, frequently interacting with the chatbot for various services. This segment is critical for understanding customer needs and improving service efficiency.
+     ![Frequent Interactors](./images/frequent_interactors.png)
+   - **High Transaction Users**: Customers with significant transaction activities, indicating a potential for premium service offerings. Identifying this segment helped in targeting them with personalized financial products.
+     ![High Transaction Users](./images/high_transaction_users.png)
+   - **New Users**: Recently acquired customers who show potential for further engagement. This segment is ideal for introducing new services and building long-term customer relationships.
+     ![New Users](./images/new_users.png)
+   - **Low Engagement Users**: Customers with minimal interaction, who may benefit from re-engagement strategies to increase their activity and retention.
+     ![Low Engagement Users](./images/low_engagement_users.png)
 
-6. **Visualization**:
-   - Created visualizations like scatter plots to display the distribution of customer segments.
-   - Utilized histograms to highlight the distribution of RFM values within each segment.
-
-7. **Impact & Insights**:
-   - Implemented targeted marketing strategies based on customer segments, resulting in a 15% increase in customer engagement.
-   - Personalized campaigns for high transaction users and frequent interactors led to a 10% increase in sales.
-
-8. **Key Findings**:
-   - Identified peak interaction times, optimizing marketing efforts for high engagement periods.
-   - Discovered that high transaction users respond positively to premium offers, driving significant revenue growth.
-
-#### **Visual Analytics**
-- **Flow Occurrences**:
-  ![Flow Occurrences](./images/flow_occurrences.png)
-  This chart illustrates the frequency of different customer journeys through the banking chatbot, showcasing key interaction flows and their outcomes.
-
-- **Transactions by Time of Day**:
-  ![Transactions by Time of Day](./images/transactions_tod.png)
-  Histogram depicting the distribution of customer transactions across various times of day, providing insights into peak interaction periods.
-
-- **Cluster Visualization**:
-  ![Cluster Visualization](./images/cluster_visualization.png)
-  Scatter plot showcasing customer segments. Each cluster represents a distinct group with unique characteristics, derived from banking chatbot interactions.
+6. **Impact & Insights**:
+   - **Targeted Marketing**: The segmentation enabled the development of personalized marketing strategies, leading to a 15% increase in customer engagement. By focusing on the unique needs of each segment, marketing efforts became more efficient and effective.
+   - **Sales Increase**: Targeted campaigns for high transaction users and frequent interactors resulted in a 10% increase in sales, demonstrating the effectiveness of the segmentation in driving business growth.
+   - **Actionable Insights**: Provided a deep understanding of customer behaviors and preferences, allowing for continuous improvement of the chatbot and associated services.
 
 #### **Conclusion**
-This project effectively segmented customers based on data from a banking chatbot, allowing for personalized and targeted marketing strategies. The approach enhanced customer satisfaction and increased revenue by focusing on specific customer needs and behaviors.
+This project effectively segmented customers based on data from a banking chatbot, allowing for personalized and targeted marketing strategies. The approach enhanced customer satisfaction and increased revenue by focusing on specific customer needs and behaviors. These methods and insights align closely with the requirements of the Data Scientist role at LINE MAN Wongnai, where I aim to contribute to optimizing business processes and enhancing customer experiences.
