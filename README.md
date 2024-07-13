@@ -26,7 +26,7 @@ This project involves dividing customers into different groups using data obtain
 
 3. **Exploratory Data Analysis (EDA)**:
    - Conducted EDA to uncover patterns and trends in customer interactions.
-   - Used visualizations such as histograms and stacked bar charts to analyze data distributions and relationships.
+   - Used visualizations such as histograms and heatmaps to analyze data distributions and relationships.
 
 4. **Feature Engineering**:
    - Created new features such as Recency, Frequency, and Monetary (RFM) values to capture customer behaviors based on chatbot interactions.
@@ -47,9 +47,12 @@ This project involves dividing customers into different groups using data obtain
    - **Transaction Frequency**: Frequency of customer interactions, highlighting how often customers use the chatbot for various services.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - **Visualizations**: Created histograms and stacked bar charts to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
-   ![EDA Visualization](./assets/images/Occurrence_of_flows.png)
-   ![EDA Visualization](./assets/images/Occurrences_of_flows.png)
+   - **Visualizations**: Created histograms and heatmaps to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
+   ![EDA Visualization](./assets/images/occurrence_of_flows.png)
+   - **Insights**: Discovered that SME and PL are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, IVM, DB, and ISR are the least frequent, with 3,587, 7,295, and 6,937 instances respectively. This indicates that we should focus on optimizing SME and PL flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
+   ![EDA Visualization](./assets/images/heatmap_flow_day_of_week.png)
+   - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
+   ![EDA Visualization](./assets/images/heatmap_flow_time_of_day.png)
    - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
 
 3. **Feature Engineering**:
