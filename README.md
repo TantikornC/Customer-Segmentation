@@ -40,6 +40,9 @@ This project involves dividing customers into different groups using data obtain
    - Analyzed each cluster to identify unique characteristics and customer behaviors.
    - Defined segments based on attributes such as interaction frequency, transaction history, and customer engagement.
 
+
+<br>
+
 #### **Analytics & Visual Results**
 
 1. **Data Collection & Handling**:
@@ -47,13 +50,21 @@ This project involves dividing customers into different groups using data obtain
    - **Transaction Frequency**: Frequency of customer interactions, highlighting how often customers use the chatbot for various services.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - **Visualizations**: Created histograms and heatmaps to identify key trends and relationships in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
-   ![EDA Visualization](./assets/images/occurrence_of_flows.png)
+   - **Visualization**: A histogram was created to identify key trends in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
+   ![Occurrence of Flows](./assets/images/occurrence_of_flows.png)
    - **Insights**: Discovered that SME and PL are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, IVM, DB, and ISR are the least frequent, with 3,587, 7,295, and 6,937 instances respectively. This indicates that we should focus on optimizing SME and PL flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
-   ![EDA Visualization](./assets/images/heatmap_flow_day_of_week.png)
-   - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
-   ![EDA Visualization](./assets/images/heatmap_flow_time_of_day.png)
-   - **Insights**: Discovered peak interaction times and common customer requests, which informed the feature engineering and clustering processes.
+   
+<br>
+
+   - **Visualization**: A heatmap was created to identify key trends in the data grouped by each day of the week. This visualization helps uncover the highest and lowest interaction times for each flow on a daily basis.
+   ![Flow by Day of Week](./assets/images/heatmap_flow_day_of_week.png)
+   - **Insights**: The highest interactions occur on Tuesday and Wednesday, with peak activities in SME (25,241), PL (13,065), CD (3,139), and DB (1,257) on Tuesday, and DP (6,448), HL (3,696), and ISR (1,318) on Wednesday. Conversely, the lowest interactions are on Saturday and Sunday, with generally lower activity across all flows except for KMA (6,853). The least activities are observed in DB (799) and IVM (288) on Sunday. This indicates a need to focus on increasing support on high-activity days like Tuesday and Wednesday, improving engagement on low-activity days like Saturday and Sunday, and ensuring system stability and performance on peak days, especially for SME and PL flows.
+   
+<br>
+
+   - **Visualization**: A heatmap was created to identify key trends in the data grouped by different times of the day on the peak day for each flow. This visualization helps uncover the highest and lowest interaction times across different flows throughout the day.
+   ![Flow by Time of Day](./assets/images/heatmap_flow_time_of_day.png)
+   - **Insights**: The highest interactions typically occur in the evening with most of the activities except PL, KMA, and CD. Morning times also see high interactions for flows such as PL (4,811) and CD (1,224). Conversely, the lowest interactions generally happen at night showing minimal activity. This indicates a need to focus on providing support and ensuring system stability during peak interaction times, especially in the evening, while also optimizing resources for periods of lower activity.
 
 3. **Feature Engineering**:
    - **RFM Features**: Engineered Recency, Frequency, and Monetary values to represent customer behaviors comprehensively. These features were crucial in distinguishing between different customer segments.
