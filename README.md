@@ -53,23 +53,35 @@ This project involves dividing customers into different groups using data obtain
    - **Visualization**: A histogram was created to identify key trends in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
    ![Occurrence of Flows](./assets/images/occurrence_of_flows.png)
    - **Insights**: Discovered that SME and PL are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, IVM, DB, and ISR are the least frequent, with 3,587, 7,295, and 6,937 instances respectively. This indicates that we should focus on optimizing SME and PL flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
-   
-<br>
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by each day of the week. This visualization helps uncover the highest and lowest interaction times for each flow on a daily basis.
    ![Flow by Day of Week](./assets/images/heatmap_flow_day_of_week.png)
    - **Insights**: The highest interactions occur on Tuesday and Wednesday, with peak activities in SME (25,241), PL (13,065), CD (3,139), and DB (1,257) on Tuesday, and DP (6,448), HL (3,696), and ISR (1,318) on Wednesday. Conversely, the lowest interactions are on Saturday and Sunday, with generally lower activity across all flows except for KMA (6,853). The least activities are observed in DB (799) and IVM (288) on Sunday. This indicates a need to focus on increasing support on high-activity days like Tuesday and Wednesday, improving engagement on low-activity days like Saturday and Sunday, and ensuring system stability and performance on peak days, especially for SME and PL flows.
-   
-<br>
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by different times of the day on the peak day for each flow. This visualization helps uncover the highest and lowest interaction times across different flows throughout the day.
    ![Flow by Time of Day](./assets/images/heatmap_flow_time_of_day.png)
    - **Insights**: The highest interactions typically occur in the evening with most of the activities except PL, KMA, and CD. Morning times also see high interactions for flows such as PL (4,811) and CD (1,224). Conversely, the lowest interactions generally happen at night showing minimal activity. This indicates a need to focus on providing support and ensuring system stability during peak interaction times, especially in the evening, while also optimizing resources for periods of lower activity.
 
 3. **Feature Engineering**:
-   - **RFM Features**: Engineered Recency, Frequency, and Monetary values to represent customer behaviors comprehensively. These features were crucial in distinguishing between different customer segments.
-   - **Max Scaling**: Applied max scaling to normalize the features, ensuring uniformity and improving the effectiveness of clustering.
-   ![Feature Engineering](./images/feature_engineering.png)
+    - **Recency (Most Recent Interaction)**: Measures the time since the user's last interaction. This is crucial for understanding user engagement and activity levels.
+
+   - **Frequency**: Captures various interaction frequencies to analyze user behavior patterns:
+      - **Daily Frequency (Daily Interactions)**: Tracks the number of interactions per day.
+      - **Monthly Frequency (Monthly Interactions)**: Counts the number of interactions within a month.
+      - **Overall Frequency (Total Interactions per Intent)**: Aggregates the total interactions for each intent across all flows.
+      - **Dialog Frequency (Interactions per Dialog)**: Records the frequency of interactions for each dialog.
+      - **Intent Frequency (Interactions per Intent)**: Logs how often each intent is triggered.
+
+   - **Monetary (Average Transactions per Interaction)**: Assesses the average number of transactions per interaction to gauge the depth of each conversation.
+
+   - **Sentiment Levels (Average User Satisfaction)**: Evaluates user satisfaction by analyzing sentiment scores for each interaction.
+
+   - **Period Activity (Activity by Period of the Month)**: Breaks down user activity by the period of the month (beginning, middle, end).
+
+   - **Behavior Patterns (Flow and Dialog Completion)**: Analyzes the end points of user interactions, identifying which flows and dialogs are completed most frequently and how often they are concluded.
+
+**Note**: We counted interactions by checking if the time difference between two transactions is not more than 10 minutes. If the time difference is more than 10 minutes, it is counted as a separate interaction.
+
 
 4. **Clustering**:
    - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
