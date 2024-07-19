@@ -87,9 +87,9 @@ This project involves dividing customers into different groups using data obtain
 4. **Clustering**:
    - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
    - **Grouping by Medians**: Grouped the clusters into broader segments using the median values of the "latest_chat" and "avg_transactions" features. This method ensured that customers were categorized into meaningful segments based on their interaction recency and transaction frequency.
-   ![Initial Clusters](./images/initial_clusters.png)
+   ![Initial Clusters](./assets/images/clustering.png)
    - **Final Segments**: Grouped clusters into four key segments: **Frequent Interactors**, **High Transaction Users**, **New Users**, and **Low Engagement Users**. This segmentation facilitated targeted marketing strategies.
-   ![Cluster Grouping](./images/cluster_grouping.png)
+   ![Cluster Grouping](./assets/images/clustered.png)
 
 5. **Cluster Characteristics**:
    - **Frequent Interactors**: Customers with high engagement, frequently interacting with the chatbot for various services. This segment is critical for understanding customer needs and improving service efficiency.
