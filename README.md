@@ -18,11 +18,12 @@ This project involves dividing customers into different groups using data obtain
 #### **Steps & Methodology**
 1. **Data Collection**:
    - Utilized data from a banking chatbot, which includes customer interaction logs and transaction history.
-   - Collected a large dataset with over 1 million records to ensure comprehensive analysis.
+   - Collected a large dataset with almost 300,000 records to ensure comprehensive analysis.
 
 2. **Data Handling**:
    - The dataset was already clean and primarily consisted of interaction logs without numerical values like prices.
    - Handled missing values by dropping incomplete records due to the large dataset size, ensuring that analysis remained robust despite data removal.
+   - Applied Z-score method to identify and remove outliers from the dataset. This involved calculating the Z-score for each data point and removing those that fell beyond a threshold (Z > 3 or Z < -3), ensuring that the remaining data accurately represented typical customer interactions and behaviors.
 
 3. **Exploratory Data Analysis (EDA)**:
    - Conducted EDA to uncover patterns and trends in customer interactions.
@@ -85,7 +86,7 @@ This project involves dividing customers into different groups using data obtain
 
 4. **Clustering**:
    - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
-   - **Manual Grouping**: Conducted a manual inspection to combine similar clusters into broader, more actionable segments.
+   - **Grouping by Medians**: Grouped the clusters into broader segments using the median values of the "latest_chat" and "avg_transactions" features. This method ensured that customers were categorized into meaningful segments based on their interaction recency and transaction frequency.
    ![Initial Clusters](./images/initial_clusters.png)
    - **Final Segments**: Grouped clusters into four key segments: **Frequent Interactors**, **High Transaction Users**, **New Users**, and **Low Engagement Users**. This segmentation facilitated targeted marketing strategies.
    ![Cluster Grouping](./images/cluster_grouping.png)
