@@ -64,6 +64,8 @@ This project involves dividing customers into different groups using data obtain
    - **Insights**: The highest interactions typically occur in the evening with most of the activities except PL, KMA, and CD. Morning times also see high interactions for flows such as PL (4,811) and CD (1,224). Conversely, the lowest interactions generally happen at night showing minimal activity. This indicates a need to focus on providing support and ensuring system stability during peak interaction times, especially in the evening, while also optimizing resources for periods of lower activity.
 
 3. **Feature Engineering**:
+
+   We developed the following features to provide a comprehensive understanding of customer characteristics:
     - **Recency (Most Recent Interaction)**: Measures the time since the user's last interaction. This is crucial for understanding user engagement and activity levels.
 
    - **Frequency**: Captures various interaction frequencies to analyze user behavior patterns:
@@ -81,25 +83,25 @@ This project involves dividing customers into different groups using data obtain
 
    - **Behavior Patterns (Flow and Dialog Completion)**: Analyzes the end points of user interactions, identifying which flows and dialogs are completed most frequently and how often they are concluded.
 
-**Note**: We counted interactions by checking if the time difference between two transactions is not more than 10 minutes. If the time difference is more than 10 minutes, it is counted as a separate interaction.
+   **Note**: We counted interactions by checking if the time difference between two transactions is not more than 10 minutes. If the time difference is more than 10 minutes, it is counted as a separate interaction.
 
 
 4. **Clustering**:
    - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
    - **Grouping by Medians**: Grouped the clusters into broader segments using the median values of the "latest_chat" and "avg_transactions" features. This method ensured that customers were categorized into meaningful segments based on their interaction recency and transaction frequency.
    ![Initial Clusters](./assets/images/clustering.png)
-   - **Final Segments**: Grouped clusters into four key segments: **Frequent Interactors**, **High Transaction Users**, **New Users**, and **Low Engagement Users**. This segmentation facilitated targeted marketing strategies.
+   - **Final Segments**: Grouped clusters into four key segments: **New Customers**, **Recent Active**, **Occasional Active**, and **Inactive** and grouped the similar clusters into one cluster. This segmentation facilitated targeted marketing strategies.
+      - **New Customers**: Recently acquired customers with fewer interactions. This segment shows potential for further engagement and is ideal for introducing new services and building long-term customer relationships.
+      - **Recent Active**: Customers who have interacted with the chatbot recently and have high transaction frequency. This segment is critical for understanding customer needs and improving service efficiency.
+      - **Occasional Active**: Customers who interact with the chatbot less frequently but have a high transaction frequency. Identifying this segment helps target them with personalized financial products and re-engagement strategies.
+      - **Inactive**: Customers with minimal recent interaction and low transaction frequency. This segment may benefit from re-engagement strategies to increase their activity and retention.
    ![Cluster Grouping](./assets/images/clustered.png)
 
 5. **Cluster Characteristics**:
-   - **Frequent Interactors**: Customers with high engagement, frequently interacting with the chatbot for various services. This segment is critical for understanding customer needs and improving service efficiency.
-     ![Frequent Interactors](./images/frequent_interactors.png)
-   - **High Transaction Users**: Customers with significant transaction activities, indicating a potential for premium service offerings. Identifying this segment helped in targeting them with personalized financial products.
-     ![High Transaction Users](./images/high_transaction_users.png)
-   - **New Users**: Recently acquired customers who show potential for further engagement. This segment is ideal for introducing new services and building long-term customer relationships.
-     ![New Users](./images/new_users.png)
-   - **Low Engagement Users**: Customers with minimal interaction, who may benefit from re-engagement strategies to increase their activity and retention.
-     ![Low Engagement Users](./images/low_engagement_users.png)
+   - **New Customers**: Recently acquired customers with fewer interactions. This segment shows potential for further engagement and is ideal for introducing new services and building long-term customer relationships.
+   - **Recent Active**: Customers who have interacted with the chatbot recently and have high transaction frequency. This segment is critical for understanding customer needs and improving service efficiency.
+   - **Occasional Active**: Customers who interact with the chatbot less frequently but have a high transaction frequency. Identifying this segment helps target them with personalized financial products and re-engagement strategies.
+   - **Inactive**: Customers with minimal recent interaction and low transaction frequency. This segment may benefit from re-engagement strategies to increase their activity and retention.
 
 6. **Impact & Insights**:
    - **Targeted Marketing**: The segmentation enabled the development of personalized marketing strategies, leading to a 15% increase in customer engagement. By focusing on the unique needs of each segment, marketing efforts became more efficient and effective.
