@@ -51,7 +51,7 @@ This project involves dividing customers into different groups using data obtain
    - **Transaction Frequency**: Frequency of customer interactions, highlighting how often customers use the chatbot for various services.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - **Visualization**: A histogram was created to identify key trends in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
+   - **Visualization**: A histogram of flows was created to identify key trends in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
    ![Occurrence of Flows](./assets/images/occurrence_of_flows.png)
    - **Insights**: Discovered that SME and PL are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, IVM, DB, and ISR are the least frequent, with 3,587, 7,295, and 6,937 instances respectively. This indicates that we should focus on optimizing SME and PL flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
 
