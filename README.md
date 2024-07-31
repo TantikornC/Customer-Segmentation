@@ -97,6 +97,3 @@ This project involves dividing customers into different groups using data obtain
    - **Targeted Marketing Potential**: The segmentation provides a foundation for developing personalized marketing strategies. By identifying unique customer segments, the team is positioned to craft more efficient and effective marketing efforts that cater to the specific needs and preferences of each group.
    - **Enhanced Customer Understanding**: The analysis offered a comprehensive view of customer behaviors and preferences, which is crucial for tailoring communications and offers. This understanding sets the stage for targeted campaigns that can be refined and iterated over time for greater impact.
    - **Actionable Insights**: Provided a deep understanding of customer behaviors and preferences, allowing for continuous improvement of the chatbot and associated services.
-
-#### **Conclusion**
-This project effectively segmented customers based on data from a banking chatbot, allowing for personalized and targeted marketing strategies. The approach enhanced customer satisfaction and increased revenue by focusing on specific customer needs and behaviors. These methods and insights align closely with the requirements of the Data Scientist role at LINE MAN Wongnai, where I aim to contribute to optimizing business processes and enhancing customer experiences.
