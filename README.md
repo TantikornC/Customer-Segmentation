@@ -1,21 +1,19 @@
 # 🧑‍💼 Tantikorn Chatavaraha - Data Science Portfolio
 
-Welcome to my data science portfolio! Here, I showcase my project and expertise in data science. This repository includes detailed descriptions, methodologies, and results of my work when I was an intern at Botnoi Consulting.
+Welcome to my data science portfolio! Here, I showcase my projects and expertise in data science. This repository includes detailed descriptions, methodologies, and results of my work when I was an intern at Botnoi Consulting.
 
-## **Project**
+# **Customer Segmentation**
 
-### **Customer Segmentation**
-
-#### **Overview**
+## **Overview**
 This project involves dividing customers into different groups using data obtained from a banking chatbot. The objective is to categorize customers into distinct segments to enable targeted marketing strategies, improving engagement and sales.
 
-#### **Tools & Technologies**
+## **Tools & Technologies**
 - **Programming**: Python
 - **Data Analysis**: Pandas, Scikit-learn
 - **Visualization**: Matplotlib, Seaborn
 - **Feature Scaling**: Max scaling
 
-#### **Steps & Methodology**
+## **Steps & Methodology**
 1. **Data Collection & Handling**:
    - Utilized data from a banking chatbot, which includes customer interaction logs and transaction history.
    - Collected a large dataset with almost 300,000 records to ensure comprehensive analysis.
@@ -39,9 +37,7 @@ This project involves dividing customers into different groups using data obtain
    - Analyzed each cluster to identify unique characteristics and customer behaviors.
    - Defined segments based on attributes such as interaction frequency, transaction history, and customer engagement.
 
-<br>
-
-#### **Analytics & Visual Results**
+## **Analytics & Visual Results**
 
 1. **Data Collection & Handling**:
    - **Chatbot Interaction Logs**: Detailed logs capturing customer queries and interactions with the banking chatbot, providing insights into customer behavior and engagement.
