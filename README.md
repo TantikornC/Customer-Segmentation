@@ -49,7 +49,9 @@ This project involves dividing customers into different groups using data obtain
    - **Insights**: Discovered that A and B are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, H, I, and J are the least frequent, with 7,295, 6,937, and 3,587 instances respectively. This indicates that we should focus on optimizing A and B flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by each day of the week. This visualization helps uncover the highest and lowest interaction times for each flow on a daily basis.
+   - 
    ![Flow by Day of Week](./assets/images/heatmap_flow_day_of_week.png)
+
    - **Insights**: The highest interactions occur on Tuesday and Wednesday, with peak activities in A (25,241), B (13,065), F (3,139), and H (1,257) on Tuesday, and C (6,448), G (3,696), and I (1,318) on Wednesday. Conversely, the lowest interactions are on Saturday and Sunday, with generally lower activity across all flows except for D (6,853). The least activities are observed in H (799) and J (288) on Sunday. This indicates a need to focus on increasing support on high-activity days like Tuesday and Wednesday, improving engagement on low-activity days like Saturday and Sunday, and ensuring system stability and performance on peak days, especially for A and B flows.
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by different times of the day on the peak day for each flow. This visualization helps uncover the highest and lowest interaction times across different flows throughout the day.
