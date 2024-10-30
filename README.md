@@ -45,17 +45,27 @@ This project involves dividing customers into different groups using data obtain
 
 2. **Exploratory Data Analysis (EDA)**:
    - **Visualization**: A histogram of flows was created to identify key trends in the data. This analysis helped uncover significant variables influencing customer engagement and transaction behavior.
-   ![Occurrence of Flows](./assets/images/occurrence_of_flows.png)
+   <p align="center">
+     <img src="./assets/images/occurrence_of_flows.png" alt="Occurrence of Flows"/>
+   </p>
+   <p align="center">Occurrence of Flows</p>
+   
    - **Insights**: Discovered that A and B are the primary interactions, with 133,168 and 63,711 instances respectively. Conversely, H, I, and J are the least frequent, with 7,295, 6,937, and 3,587 instances respectively. This indicates that we should focus on optimizing A and B flows due to their high engagement and investigate and improve the lower engagement flows to balance user interaction.
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by each day of the week. This visualization helps uncover the highest and lowest interaction times for each flow on a daily basis.
-   - 
-   ![Flow by Day of Week](./assets/images/heatmap_flow_day_of_week.png)
-
+   <p align="center">
+     <img src="./assets/images/heatmap_flow_day_of_week.png" alt="Flow by Day of Week"/>
+   </p>
+   <p align="center">Flow by Day of Week</p>
+   
    - **Insights**: The highest interactions occur on Tuesday and Wednesday, with peak activities in A (25,241), B (13,065), F (3,139), and H (1,257) on Tuesday, and C (6,448), G (3,696), and I (1,318) on Wednesday. Conversely, the lowest interactions are on Saturday and Sunday, with generally lower activity across all flows except for D (6,853). The least activities are observed in H (799) and J (288) on Sunday. This indicates a need to focus on increasing support on high-activity days like Tuesday and Wednesday, improving engagement on low-activity days like Saturday and Sunday, and ensuring system stability and performance on peak days, especially for A and B flows.
 
    - **Visualization**: A heatmap was created to identify key trends in the data grouped by different times of the day on the peak day for each flow. This visualization helps uncover the highest and lowest interaction times across different flows throughout the day.
-   ![Flow by Time of Day](./assets/images/heatmap_flow_time_of_day.png)
+   <p align="center">
+     <img src="./assets/images/heatmap_flow_time_of_day.png" alt="Flow by Time of Day"/>
+   </p>
+   <p align="center">Flow by Time of Day</p>
+   
    - **Insights**: The highest interactions typically occur in the evening with most of the activities except B, D, and F. Morning times also see high interactions for flows such as B (4,811) and F (1,224). Conversely, the lowest interactions generally happen at night showing minimal activity. This indicates a need to focus on providing support and ensuring system stability during peak interaction times, especially in the evening, while also optimizing resources for periods of lower activity.
 
 3. **Feature Engineering**:
@@ -83,13 +93,20 @@ This project involves dividing customers into different groups using data obtain
 4. **Clustering**:
    - **Initial Clustering**: Set the number of clusters to 20 based on advice from a senior data scientist. This allowed for a detailed initial segmentation of customers, capturing a wide range of behaviors.
    - **Grouping by Medians**: Grouped the clusters into broader segments using the median values of the "latest_chat" and "avg_transactions" features. This method ensured that customers were categorized into meaningful segments based on their interaction recency and transaction frequency.
-   ![Initial Clusters](./assets/images/clustering.png)
+   <p align="center">
+     <img src="./assets/images/clustering.png" alt="Initial Clusters"/>
+   </p>
+   <p align="center">Initial Clusters</p>
+   
    - **Final Segments**: Grouped clusters into four key segments: **New Customers**, **Recent Active**, **Occasional Active**, and **Inactive** and grouped the similar clusters into one cluster. This segmentation facilitated targeted marketing strategies.
       - **New Customers**: Recently acquired customers with fewer interactions. This segment shows potential for further engagement and is ideal for introducing new services and building long-term customer relationships.
       - **Recent Active**: Customers who have interacted with the chatbot recently and have high transaction frequency. This segment is critical for understanding customer needs and improving service efficiency.
       - **Occasional Active**: Customers who interact with the chatbot less frequently but have a high transaction frequency. Identifying this segment helps target them with personalized financial products and re-engagement strategies.
       - **Inactive**: Customers with minimal recent interaction and low transaction frequency. This segment may benefit from re-engagement strategies to increase their activity and retention.
-   ![Cluster Grouping](./assets/images/clustered.png)
+   <p align="center">
+     <img src="./assets/images/clustered.png" alt="Cluster Grouping"/>
+   </p>
+   <p align="center">Cluster Grouping</p>
 
 5. **Impact & Insights**:
    - **Targeted Marketing Potential**: The segmentation provides a foundation for developing personalized marketing strategies. By identifying unique customer segments, the team is positioned to craft more efficient and effective marketing efforts that cater to the specific needs and preferences of each group.
